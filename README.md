@@ -6,3 +6,10 @@ Code:
 const text = "hello";
 wordCounter(text);
 Expected Output: 1
+
+TEST #2
+Test: "It should return 2 if a passage has two words."
+Code:
+const text = "hello there";
+wordCounter(text);
+Expected Output: 2
