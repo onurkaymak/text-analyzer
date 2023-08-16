@@ -70,3 +70,11 @@ const text = "red RED Red green Green GREEN";
 const word = "Red";
 numberOfOccurrencesInText(word, text);
 Expected Output: 3
+
+TEST #6
+Test: "It should return a word match regardless of punctuation."
+Code:
+const text = "Red! Red. I like red, green, and yellow.";
+const word = "Red";
+numberOfOccurrencesInText(word, text);
+Expected Output: 3

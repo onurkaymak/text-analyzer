@@ -19,7 +19,7 @@ function numberOfOccurrencesInText(word, text) {
     const textArray = text.split(" ");
     let wordCount = 0;
     textArray.forEach(function (element) {
-        if (word.toLowerCase() === element.toLowerCase()) {
+        if (element.toLowerCase().includes(word.toLowerCase())) {
             wordCount++;
         }
     });
@@ -28,5 +28,5 @@ function numberOfOccurrencesInText(word, text) {
 
 
 window.addEventListener("load", function () {
-    numberOfOccurrencesInText("Red", "red RED Red green Green GREEN");
+    numberOfOccurrencesInText("Red", "Red! Red. I like red, green, and yellow.");
 });
