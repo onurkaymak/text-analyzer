@@ -26,7 +26,18 @@ function numberOfOccurrencesInText(word, text) {
     return wordCount;
 }
 
+function omitsBadWords(text) {
+    const textArray = text.split(" ");
+    const badWords = ['zoinks', 'muppeteer', 'biffaroni', 'loopdaloop'];
+    textArray.forEach(function (element) {
+        if (badWords.includes(element)) {
+
+        }
+    });
+
+}
+
 
 window.addEventListener("load", function () {
-    numberOfOccurrencesInText("Red", "Red! Red. I like red, green, and yellow.");
+    omitsBadWords('I play zoinks')
 });
