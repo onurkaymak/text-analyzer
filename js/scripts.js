@@ -19,15 +19,14 @@ function numberOfOccurrencesInText(word, text) {
     const textArray = text.split(" ");
     let wordCount = 0;
     textArray.forEach(function (element) {
-        if (word === element) {
-            wordCount++
+        if (word.toLowerCase() === element.toLowerCase()) {
+            wordCount++;
         }
     });
-    console.log(wordCount)
     return wordCount;
 }
 
 
 window.addEventListener("load", function () {
-    numberOfOccurrencesInText("red", "red blue red red red green");
+    numberOfOccurrencesInText("Red", "red RED Red green Green GREEN");
 });
