@@ -14,14 +14,20 @@ function wordCounter(text) {
     return wordCount;
 }
 
+
 function numberOfOccurrencesInText(word, text) {
-    if (word === text) {
-        return 1;
-    }
-    return 0;
+    const textArray = text.split(" ");
+    let wordCount = 0;
+    textArray.forEach(function (element) {
+        if (word === element) {
+            wordCount++
+        }
+    });
+    console.log(wordCount)
+    return wordCount;
 }
 
 
 window.addEventListener("load", function () {
-    numberOfOccurrencesInText("red", "red");
+    numberOfOccurrencesInText("red", "red blue red red red green");
 });
