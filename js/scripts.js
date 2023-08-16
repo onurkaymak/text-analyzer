@@ -14,7 +14,11 @@ function wordCounter(text) {
     return wordCount;
 }
 
+function numberOfOccurrencesInText(word, text) {
+    return 0;
+}
+
 
 window.addEventListener("load", function () {
-    wordCounter()
+    numberOfOccurrencesInText("red", "");
 });
