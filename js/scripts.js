@@ -29,15 +29,29 @@ function numberOfOccurrencesInText(word, text) {
 function omitsBadWords(text) {
     const textArray = text.split(" ");
     const badWords = ['zoinks', 'muppeteer', 'biffaroni', 'loopdaloop'];
-    textArray.forEach(function (element) {
+    textArray.forEach(function (element, index) {
         if (badWords.includes(element)) {
-
+            textArray.splice(index, index);
         }
+        return textArray
     });
 
 }
 
+// UI Logic
+
+function handleFormSubmission(event) {
+    event.preventDefault();
+    const passage = document.getElementById("text-passage").value;
+    const word = document.getElementById("word").value;
+    const wordCount = wordCounter(passage);
+    const occurrencesOfWord = numberOfOccurrencesInText(word, passage);
+    document.getElementById("total-count").innerText = wordCount;
+    document.getElementById("selected-count").innerText = occurrencesOfWord;
+}
 
 window.addEventListener("load", function () {
-    omitsBadWords('I play zoinks')
+    document.querySelector("form#word-counter").addEventListener("submit", handleFormSubmission);
+
 });
+
