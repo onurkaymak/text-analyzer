@@ -47,7 +47,7 @@ function boldPassage(word, text) {
     }
     const p = document.createElement("p");
     let textArray = text.split(" ");
-    textArray.forEach(function (element) {
+    textArray.forEach(function (element, index) {
         if (word === element) {
             const bold = document.createElement("strong");
             bold.append(element);
@@ -55,9 +55,12 @@ function boldPassage(word, text) {
         } else {
             p.append(element);
         }
-        p.append(" ");
+        if (index !== (textArray.length - 1)) {
+            p.append(" ");
+        }
     });
-    return p;
+    // return p;
+    document.body.append(p);
 }
 
 
@@ -72,6 +75,7 @@ function handleFormSubmission(event) {
     const occurrencesOfWord = numberOfOccurrencesInText(word, passage);
     document.getElementById("total-count").innerText = wordCount;
     document.getElementById("selected-count").innerText = occurrencesOfWord;
+
 }
 
 window.addEventListener("load", function () {
