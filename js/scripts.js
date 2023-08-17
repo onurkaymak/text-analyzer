@@ -41,6 +41,13 @@ function omitsBadWords(text) {
 
 }
 
+function boldPassage(word, text) {
+    if ((text.trim().length === 0) || (word.trim().length === 0)) {
+        return null;
+    }
+}
+
+
 // UI Logic
 
 function handleFormSubmission(event) {
