@@ -89,9 +89,18 @@ Expected Output: 0
 
 Describe: boldPassage()
 
+TEST #1
 Test: "It should return null if no word or text is entered."
 Code:
 const text = "";
 const word = "";
 boldPassage(word, text);
 Expected Output: null
+
+TEST #2
+Test: "It should return a non-matching word in a p tag."
+Code:
+const word = "hello";
+const text = "yo";
+boldPassage(word, text);
+Expected Output: <p>yo</p>
