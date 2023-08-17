@@ -59,8 +59,7 @@ function boldPassage(word, text) {
             p.append(" ");
         }
     });
-    // return p;
-    document.body.append(p);
+    return p;
 }
 
 
